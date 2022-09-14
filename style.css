@@ -1,0 +1,97 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #a01eac69;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #131313;
+    max-width: 325px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 35px;
+    border-radius: 10px;
+    /* user-select: none; */
+}
+
+#Display-area {
+    width: 100%;
+    margin: 3vh 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, minmax(40px, auto));
+    word-wrap: break-word;
+    padding-bottom: 2rem;
+    /* border-bottom: 1px solid rgba(128, 128, 128, 0.116); */
+}
+
+#Display-area .currentInput {
+    text-align: right;
+    height: 8vh;
+    color: #fff;
+    font-size: xx-large;
+    line-height: 2;
+    word-wrap: break-word;
+}
+
+#Display-area .answerScreen {
+    text-align: right;
+    color: rgba(150, 150, 150, 0.87);
+    height: 7px;
+    line-height: 3;
+    font-size: larger;
+
+}
+
+.keypad {
+    display: grid;
+    grid: repeat(5, 70px) / repeat(4, 70px);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.keypad button {
+    outline: none;
+    border: none;
+    border-radius: 122px;
+    background-color: gray;
+    color: #fff;
+    font-size: x-large;
+}
+
+.keypad .func-btn {
+    color: #fff;
+    background-color: chocolate;
+    font-weight: bold;
+}
+
+.keypad .spacial {
+    color: black;
+    background-color: lightgray;
+}
+
+.num-btn:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.func-btn:hover {
+    background-color: #fff;
+    color: orangered;
+}
+
+@media only screen and(max-width:600px) {
+    body {
+        background-color: #131313;
+        align-items: flex-start;
+    }
+}
